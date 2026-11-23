@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stark AI • Atendimento 24h no WhatsApp & Renda Recorrente | Shop do Mercado Digital</title>
-    <meta name="description" content="Ative seu teste grátis de 7 dias da Stark AI sem cartão de crédito. Inteligência Artificial humanizada no WhatsApp e oportunidade de renda recorrente no Digital's Club.">
+    <title>Stark AI • Atendimento 24h no WhatsApp | Shop do Mercado Digital</title>
+    <meta name="description" content="Ative seu teste grátis de 7 dias da Stark AI sem cartão de crédito. Inteligência Artificial humanizada para atender, responder dúvidas e vender no seu WhatsApp 24h por dia.">
     
     <!-- Meta Pixel Code (ID: 252780824501847) -->
     <script>
@@ -72,10 +72,6 @@
             box-shadow: 0 0 45px -8px rgba(0, 230, 118, 0.32), 0 0 25px -10px rgba(245, 158, 11, 0.25);
         }
 
-        .gold-glow {
-            box-shadow: 0 0 35px -10px rgba(245, 158, 11, 0.28);
-        }
-
         .emerald-glow {
             box-shadow: 0 0 30px -5px rgba(0, 230, 118, 0.45);
         }
@@ -92,30 +88,6 @@
         }
         .whatsapp-float-btn {
             animation: whatsappPulse 2.2s infinite;
-        }
-
-        /* Custom Range Slider for Earnings Calculator */
-        input[type="range"] {
-            -webkit-appearance: none;
-            appearance: none;
-            background: transparent;
-            cursor: pointer;
-        }
-        input[type="range"]::-webkit-slider-runnable-track {
-            background: #1E2638;
-            height: 0.55rem;
-            border-radius: 9999px;
-        }
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            margin-top: -6px;
-            background-color: #F59E0B;
-            height: 1.3rem;
-            width: 1.3rem;
-            border-radius: 9999px;
-            border: 3px solid #07090F;
-            box-shadow: 0 0 12px rgba(245, 158, 11, 0.85);
         }
     </style>
 </head>
@@ -163,7 +135,7 @@
                         </span>
                     </div>
 
-                    <!-- Responsive 9:16 YouTube Shorts Embed (ID: NLErfjYCzM4) -->
+                    <!-- Responsive 9:16 YouTube Shorts Embed -->
                     <div class="relative w-full aspect-[9/16] rounded-[1.4rem] overflow-hidden bg-black border border-slate-800 shadow-inner">
                         <iframe 
                             class="w-full h-full object-cover"
@@ -278,23 +250,82 @@
         </div>
     </section>
 
-    <!-- 4. DUAL OPPORTUNITY SECTION + INTERACTIVE EARNINGS CALCULATOR -->
-    <section id="opcoes-ativacao" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#0A0D16] border-y border-slate-800/80">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-400">Escolha o seu objetivo</span>
-                <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white mt-2 mb-4">
-                    Use no seu negócio ou lucre indicando para outros empreendedores
+    <!-- 3.5 CARROSSEL DE 10 IMAGENS (API OFICIAL & CATEGORIA UTILIDADE) -->
+    <section id="carrossel-utilidade" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#080B12] border-t border-slate-800/70">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-emeraldNeon">Estratégia na Prática</span>
+                <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white mt-2 mb-3">
+                    Como funciona a API Oficial e a categoria Utilidade
                 </h2>
                 <p class="text-slate-400 text-sm sm:text-base">
-                    Comece hoje mesmo testando gratuitamente no seu WhatsApp ou garanta sua licença oficial de revenda no Digital's Club.
+                    Deslize ou clique nas setas para ver os 10 slides explicativos sobre envio em massa, custo por mensagem e organização da operação.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-                
-                <!-- CARD 1 (VERDE NEON): PARA O SEU NEGÓCIO — STARK AI 7 DIAS GRÁTIS -->
-                <div class="bg-cardDark border border-emerald-500/40 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+            <div class="max-w-md mx-auto">
+                <div class="bg-cardDark border border-borderDark rounded-3xl p-4 sm:p-5 shadow-2xl">
+                    <!-- Barra superior do slide -->
+                    <div class="flex items-center justify-between mb-3 px-1">
+                        <span id="carousel-caption" class="text-xs font-semibold text-slate-300 truncate pr-2">
+                            Envio de mensagens em massa
+                        </span>
+                        <span id="carousel-counter" class="text-xs font-bold text-emeraldNeon bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-0.5 rounded-full shrink-0">
+                            01 / 10
+                        </span>
+                    </div>
+
+                    <!-- Área quadrada da imagem -->
+                    <div id="carousel-touch-area" class="relative aspect-square w-full rounded-2xl overflow-hidden bg-obsidian border border-slate-800">
+                        <img
+                            id="carousel-img"
+                            src="1.jpg"
+                            alt="Envio de mensagens em massa pela API oficial na categoria Utilidade"
+                            class="w-full h-full object-cover transition-opacity duration-200"
+                        >
+
+                        <button
+                            type="button"
+                            onclick="prevSlide()"
+                            aria-label="Imagem anterior"
+                            class="absolute left-2.5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-obsidian/85 hover:bg-obsidian border border-slate-700 text-white flex items-center justify-center shadow-lg cursor-pointer transition-colors"
+                        >
+                            <i class="fa-solid fa-chevron-left text-sm"></i>
+                        </button>
+
+                        <button
+                            type="button"
+                            onclick="nextSlide()"
+                            aria-label="Próxima imagem"
+                            class="absolute right-2.5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-obsidian/85 hover:bg-obsidian border border-slate-700 text-white flex items-center justify-center shadow-lg cursor-pointer transition-colors"
+                        >
+                            <i class="fa-solid fa-chevron-right text-sm"></i>
+                        </button>
+                    </div>
+
+                    <!-- Bolinhas indicadoras -->
+                    <div id="carousel-dots" class="flex items-center justify-center gap-1.5 mt-4 flex-wrap"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. TESTE GRATUITO STARK AI (CENTRALIZADO) -->
+    <section id="opcoes-ativacao" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#0A0D16] border-y border-slate-800/80">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-emeraldNeon">Teste Grátis de 7 Dias</span>
+                <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white mt-2 mb-4">
+                    Pare de perder clientes por demora no WhatsApp
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Comece hoje mesmo seu teste grátis de 7 dias na Stark AI e deixe nossa IA atender, responder dúvidas e fechar vendas no seu WhatsApp 24h por dia.
+                </p>
+            </div>
+
+            <div class="max-w-xl mx-auto">
+                <!-- CARD STARK AI 7 DIAS GRÁTIS -->
+                <div class="bg-cardDark border border-emerald-500/40 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl">
                     <div>
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emeraldNeon text-xs font-bold mb-4">
                             PARA O SEU NEGÓCIO • USO OPERACIONAL
@@ -337,7 +368,7 @@
                     </div>
 
                     <div>
-                        <a href="https://starkai.com.br/cadastro.php?ref=1609" target="_blank" rel="noopener noreferrer" onclick="trackPixelEvent('Lead', 'Card 1 Cadastro Stark AI 7 Dias')" class="w-full py-4 px-6 rounded-2xl bg-emeraldNeon hover:bg-emerald-400 text-slate-950 font-display font-extrabold text-base sm:text-lg transition-all emerald-glow flex items-center justify-center gap-2">
+                        <a href="https://starkai.com.br/cadastro.php?ref=1609" target="_blank" rel="noopener noreferrer" onclick="trackPixelEvent('Lead', 'Card Cadastro Stark AI 7 Dias')" class="w-full py-4 px-6 rounded-2xl bg-emeraldNeon hover:bg-emerald-400 text-slate-950 font-display font-extrabold text-base sm:text-lg transition-all emerald-glow flex items-center justify-center gap-2">
                             <span>CADASTRAR E TESTAR 7 DIAS GRÁTIS</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -346,78 +377,6 @@
                         </p>
                     </div>
                 </div>
-
-                <!-- CARD 2 (DOURADO PREMIUM): LICENÇA DE REVENDA — DIGITAL'S CLUB -->
-                <div class="bg-gradient-to-b from-[#17130B] to-cardDark border-2 border-amber-500/70 rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative gold-glow">
-                    <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-amber-500 to-yellow-400 text-slate-950 text-xs font-extrabold px-3.5 py-1 rounded-full shadow-md">
-                        LUCRO IMEDIATO + RECORRÊNCIA
-                    </div>
-
-                    <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold mb-4">
-                            LICENÇA DE REVENDA • DIGITAL'S CLUB
-                        </div>
-                        <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-2">
-                            R$ 70 no PIX + R$ 30/mês Recorrente
-                        </h3>
-                        <p class="text-slate-300 text-sm mb-5">
-                            Revenda a Stark AI para comércios locais e empreendedores de todo o Brasil e construa uma carteira de renda mensal recorrente.
-                        </p>
-
-                        <!-- Interactive Earnings Simulator -->
-                        <div class="bg-obsidian/95 border border-amber-500/35 rounded-2xl p-5 mb-6">
-                            <div class="flex items-center justify-between mb-2">
-                                <label for="client-slider" class="text-xs font-bold uppercase tracking-wider text-amber-400">
-                                    Simulador de Ganhos:
-                                </label>
-                                <span class="text-sm font-extrabold text-white bg-amber-500/20 border border-amber-500/40 px-3 py-0.5 rounded-lg">
-                                    <span id="client-count">10</span> clientes ativos
-                                </span>
-                            </div>
-
-                            <input id="client-slider" type="range" min="1" max="100" value="10" class="w-full my-3" oninput="updateEarnings(this.value)">
-
-                            <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-slate-800">
-                                <div>
-                                    <span class="block text-[11px] text-slate-400">Ganho Imediato (R$ 70/ativação)</span>
-                                    <span id="pix-earnings" class="font-display text-xl sm:text-2xl font-extrabold text-emeraldNeon">R$ 700,00</span>
-                                    <span class="block text-[10px] text-emerald-300/80">na hora via PIX</span>
-                                </div>
-                                <div>
-                                    <span class="block text-[11px] text-slate-400">Renda Recorrente (R$ 30/mês)</span>
-                                    <span id="recurring-earnings" class="font-display text-xl sm:text-2xl font-extrabold text-amber-400">R$ 300,00</span>
-                                    <span class="block text-[10px] text-amber-300/80">todo mês por cliente ativo</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-coins text-amber-400 mt-1"></i>
-                                <span><strong class="text-white">R$ 70,00 no PIX na hora</strong> por cada nova ativação realizada</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-rotate text-amber-400 mt-1"></i>
-                                <span><strong class="text-white">R$ 30,00/mês recorrentes</strong> enquanto cada cliente mantiver a assinatura ativa</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-graduation-cap text-amber-400 mt-1"></i>
-                                <span>Acesso completo ao ecossistema <strong class="text-white">Digital's Club</strong> + Treinamentos e suporte</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <a href="https://digitalsclub.com.br/janedson/" target="_blank" rel="noopener noreferrer" onclick="trackPixelEvent('InitiateCheckout', 'Card 2 Licenca Revenda Digitals Club')" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-950 font-display font-extrabold text-base sm:text-lg transition-all shadow-lg flex items-center justify-center gap-2">
-                            <span>QUERO MINHA LICENÇA DE REVENDA</span>
-                            <i class="fa-solid fa-crown"></i>
-                        </a>
-                        <p class="text-center text-xs text-slate-400 mt-3">
-                            Adesão oficial Digital's Club por R$ 79,99/mês (sem fidelidade).
-                        </p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -471,19 +430,6 @@
                         <strong class="text-white">Não!</strong> Trabalhamos no modelo <strong class="text-white">pré-pago transparente</strong>. Após os 7 dias gratuitos, se quiser manter sua IA ativa, basta renovar a mensalidade de R$ 79,99. Se não quiser continuar, não há multa nem cobrança indesejada.
                     </p>
                 </details>
-
-                <!-- FAQ 4 -->
-                <details class="group bg-cardDark border border-borderDark rounded-2xl p-5 cursor-pointer">
-                    <summary class="flex items-center justify-between font-display font-bold text-white text-base sm:text-lg list-none">
-                        <span>Como funciona a revenda pelo Digital's Club?</span>
-                        <span class="text-emeraldNeon transition-transform group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </span>
-                    </summary>
-                    <p class="mt-3 text-slate-400 text-sm leading-relaxed border-t border-slate-800 pt-3">
-                        Ao ativar sua licença oficial de parceiro no <strong class="text-amber-400">Digital's Club</strong>, você recebe seu link exclusivo de indicação e passa a ganhar <strong class="text-white">R$ 70,00 no PIX na hora</strong> por cada cliente que ativar a assinatura + <strong class="text-white">R$ 30,00 recorrentes todos os meses</strong> enquanto os clientes permanecerem ativos.
-                    </p>
-                </details>
             </div>
         </div>
     </section>
@@ -508,16 +454,12 @@
                     <i class="fa-brands fa-whatsapp text-base"></i>
                     <span>Suporte Direto no WhatsApp</span>
                 </a>
-                <a href="https://digitalsclub.com.br/janedson/" target="_blank" rel="noopener noreferrer" onclick="trackPixelEvent('InitiateCheckout', 'Portal Digitals Club Rodape')" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs sm:text-sm font-semibold text-amber-400 transition-colors">
-                    <i class="fa-solid fa-crown"></i>
-                    <span>Portal Digital's Club</span>
-                </a>
             </div>
         </div>
 
         <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-slate-900 text-center text-xs text-slate-500 space-y-1">
             <p>© 2026 Shop do Mercado Digital • Janedson Freitas • CNPJ: 30.877.296/0001-94 • Quixadá - CE. Todos os direitos reservados.</p>
-            <p>Aviso Legal: Este site não faz parte do site do Facebook/Meta ou WhatsApp Inc. Os resultados financeiros com a licença de revenda variam de acordo com a aplicação e dedicação de cada parceiro.</p>
+            <p>Aviso Legal: Este site não faz parte do site do Facebook/Meta ou WhatsApp Inc. Os resultados com a automação variam de acordo com o uso e a configuração de cada negócio.</p>
         </div>
     </footer>
 
@@ -570,24 +512,78 @@
 
     <!-- INTERACTIVITY SCRIPTS -->
     <script>
-        // 1. Calculadora Interativa de Ganhos (R$ 70 PIX + R$ 30/mês Recorrente)
-        function updateEarnings(clients) {
-            const count = parseInt(clients, 10);
-            const pixTotal = count * 70;
-            const recurringTotal = count * 30;
+        // 0. Carrossel de 10 imagens (API Oficial & Categoria Utilidade)
+        const carouselSlides = [
+            { src: '1.jpg', caption: 'Envio de mensagens em massa pela API oficial' },
+            { src: '2.jpg', caption: 'O problema está no tipo de mensagem' },
+            { src: '3.jpg', caption: 'API oficial, sem atalhos' },
+            { src: '4.jpg', caption: 'Quanto custa cada envio na categoria Utilidade' },
+            { src: '5.jpg', caption: 'Custo unitário de 3,5 centavos por mensagem' },
+            { src: '6.jpg', caption: 'Onde a categoria Utilidade entra' },
+            { src: '7.jpg', caption: 'Mais controle para sua operação' },
+            { src: '8.jpg', caption: 'Menos desperdício por mensagem' },
+            { src: '9.jpg', caption: 'Pronto para economizar com previsibilidade' },
+            { src: '10.jpg', caption: 'Comece agora pela API oficial' }
+        ];
 
-            document.getElementById('client-count').textContent = count;
-            document.getElementById('pix-earnings').textContent = pixTotal.toLocaleString('pt-BR', {
-                style: 'currency',
-                currency: 'BRL'
-            });
-            document.getElementById('recurring-earnings').textContent = recurringTotal.toLocaleString('pt-BR', {
-                style: 'currency',
-                currency: 'BRL'
-            });
+        let currentSlide = 0;
+
+        function renderCarousel() {
+            const slide = carouselSlides[currentSlide];
+            const imgEl = document.getElementById('carousel-img');
+            const captionEl = document.getElementById('carousel-caption');
+            const counterEl = document.getElementById('carousel-counter');
+            const dotsEl = document.getElementById('carousel-dots');
+
+            if (!imgEl || !captionEl || !counterEl || !dotsEl) return;
+
+            imgEl.src = slide.src;
+            imgEl.alt = slide.caption;
+            captionEl.textContent = slide.caption;
+            counterEl.textContent = `${String(currentSlide + 1).padStart(2, '0')} / ${String(carouselSlides.length).padStart(2, '0')}`;
+
+            dotsEl.innerHTML = carouselSlides.map((_, idx) => {
+                const activeClass = idx === currentSlide
+                    ? 'w-6 bg-emeraldNeon'
+                    : 'w-2 bg-slate-700 hover:bg-slate-500';
+                return `<button type="button" onclick="goToSlide(${idx})" aria-label="Ir para imagem ${idx + 1}" class="h-2 rounded-full transition-all cursor-pointer ${activeClass}"></button>`;
+            }).join('');
         }
 
-        // 2. Controle do Modal de Ativação
+        function goToSlide(index) {
+            currentSlide = (index + carouselSlides.length) % carouselSlides.length;
+            renderCarousel();
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+
+        // Suporte a deslizar no celular (swipe)
+        const touchArea = document.getElementById('carousel-touch-area');
+        let touchStartX = 0;
+        if (touchArea) {
+            touchArea.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            touchArea.addEventListener('touchend', (e) => {
+                const touchEndX = e.changedTouches[0].screenX;
+                const diff = touchEndX - touchStartX;
+                if (Math.abs(diff) > 40) {
+                    if (diff < 0) nextSlide();
+                    else prevSlide();
+                }
+            }, { passive: true });
+        }
+
+        renderCarousel();
+
+        // 1. Controle do Modal de Ativação
         function openActivationModal() {
             const modal = document.getElementById('activation-modal');
             modal.classList.remove('hidden');
@@ -608,7 +604,7 @@
             }
         });
 
-        // 3. Rastreamento Oficial Meta Pixel (ID: 252780824501847)
+        // 2. Rastreamento Oficial Meta Pixel (ID: 252780824501847)
         function trackPixelEvent(eventName, label) {
             if (typeof fbq === 'function') {
                 fbq('track', eventName, { content_name: label });
